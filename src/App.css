@@ -5,18 +5,12 @@
 body {
   margin: 0 auto;
   font-family:sans-serif;
-  min-width: 1000px;
+  min-width: 1100px;
 }
 button {
   cursor: pointer;
 }
 
-/* header {
-  height: var(--header-h);
-  display: grid;
-  grid-template-columns: var(--sidebar-w) auto 200px;
-  border-bottom: 1px solid #E4E8EF;
-} */
 header {
   position: fixed;   /* 추가 */
   top: 0;            /* 추가 */
@@ -28,12 +22,9 @@ header {
   grid-template-columns: var(--sidebar-w) auto 200px;
   border-bottom: 1px solid #E4E8EF;
   background: white; /* 추가: 스크롤 시 뒤 내용 안 비치게 */
+  min-width: 900px;
 }
 
-/* aside {
-  width: var(--sidebar-w);
-  height: calc(100vh - var(--header-h));
-} */
 aside {
   position: fixed;        /* 추가 */
   top: var(--header-h);   /* 추가: header 아래에서 시작 */
@@ -73,10 +64,16 @@ aside {
   align-items: center;
   border-left: 1px solid #E4E8EF;
 }
-.home {
+.headerCenterhome {
   display: flex;
   flex-direction: row;
+  align-items: center;
   color: gray;
+}
+.headerHome {
+  color: #000000;
+  font-weight: 500;
+  font-size: 14px;
 }
 .inputArea {
   display: flex;
@@ -499,6 +496,7 @@ main {
   border-radius: 10px;
   cursor: pointer;
   font-size: 13px;
+  margin: 1px 0;
 }
 .chatchannelName span {
   flex: 1;
@@ -662,6 +660,10 @@ main {
   background: transparent;
   font-size: 13px;
   resize: none;
+}
+.chattextinput::placeholder {
+  color: #aaaaaa;
+  font-weight: 500;
 }
 .chattextinput:focus {
   outline: none;
