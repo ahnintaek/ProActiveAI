@@ -3,7 +3,7 @@ import React from 'react';
 const Header = ({ currentServices }) => {
   return (
     <header>
-      <a href="" className="headerLogo">
+      <a href="/home" className="headerLogo">
         <div className="logo">
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
             <rect x="1" y="1" width="9" height="9" rx="2" fill="white" fillOpacity=".9"></rect>
