@@ -39,6 +39,8 @@ aside {
   align-items: center;
   justify-content: flex-start;
   padding: 0 20px;
+  color: #000000;
+  text-decoration: none;
 }
 .logo {
   background: #5F82ED;
@@ -589,6 +591,7 @@ main {
   overflow-y: auto;
   padding: 20px 25px;
   gap: 2px;
+  background: #F2F4F8;
 }
 .chatgroup {
   display: flex;
@@ -714,4 +717,283 @@ main {
   background: #5F82ED;
   padding: 5px 10px;
   cursor: pointer;
+}
+.chatSuggestArea {
+  position: absolute;
+  right: 30px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chatSuggestBox {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 1px #cccccc;
+}
+.suggestBoxTitleArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.suggestTitle {
+  font-weight: bold;
+  font-size: 14px;
+  color: #7742E3;
+  margin: 0;
+}
+.suggestScriptTitle {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 5px 0;
+}
+.suggestScriptContent {
+  font-size: 13px;
+  color: #cccccc;
+  margin: 0;
+}
+.suggestBtnList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+.nowBtn {
+  border-radius: 10px;
+  background: #5F82ED;
+  padding: 10px 20px;
+  width: 50%;
+  color: white;
+  font-weight: 500;
+}
+.laterBtn {
+  box-shadow: 0 0 0 1px #cccccc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 50%;
+  color: #5F82ED;
+  font-weight: 500;
+}
+.chatSuggestBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+}
+.chatAISuggest {
+  border-radius: 50px;
+  background: linear-gradient(to right, #7742E3, #5F98F3);
+  width: 50px;
+  height: 50px;
+}
+.chatSuggestBadge {
+  position: relative;
+  top: -5px;
+  left: -15px;
+  background: red;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+}
+
+.boardArea {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 30px;
+  background: #F2F4F8;
+  min-height: 100%;
+  overflow-y: auto;
+}
+.boardTitle {
+  font-weight: bold;
+  font-size: 26px;
+  margin: 0;
+}
+.boardCaption {
+  font-size: 14px;
+  color: #888888;
+  margin: 0;
+}
+.boardBtnSerction {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.boardList{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.boardType {
+  box-shadow: 0 0 1px #aaaaaa;
+  border-radius: 30px;
+  padding: 5px 20px;
+  font-weight: 500;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.boardType.active {
+  background: #7742E3;
+  color: white;
+}
+.newBoard {
+  border-radius: 10px;
+  background: #5F82ED;
+  padding: 5px 13px;
+  color: white;
+  font-weight: 500;
+}
+.boardSection {
+  display: grid;
+  grid-template-columns: auto 280px;
+  gap: 10px;
+}
+
+.boardSectionCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 1px #cccccc;
+  padding: 15px 0;
+  background: #ffffff;
+}
+
+.boardSectionCardTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0 30px 5px 30px;
+}
+.boardCard {
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0 50px 10px 0;
+  display: flex;
+  align-items: center;;
+}
+.boardCard svg {
+  margin-right: 5px;
+}
+.boardCard.Unknown {
+  color: #237bff;
+}
+.boardCard.My {
+  color: #ffa13d;
+}
+.boardCard.Deadline {
+  color: #ff2626;
+}
+
+.boardSectionPannel {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.boardPost {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #eeeeee;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.boardLabel {
+  color: white;
+  width: 30px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 15px;
+  margin: 0 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+.boardLabel.notice {
+  background: #F5F3FE;
+  color: #6831D0;
+}
+.boardLabel.memo {
+  background: #F0F2FE;
+  color: #6A3CC2;
+}
+.boardLabel.announcement {
+  background: #F9FAFC;
+  color: #6D5567;
+}
+.boardLabel.share {
+  background: #F1FCF5;
+  color: #3E7659;
+}
+.boardContentArea {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+.boardContentTitle {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+}
+.boardContent {
+  font-size: 12px;
+  color: #555555;
+  margin: 0;
+}
+.boardInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 11px;
+  gap: 8px;
+  color: #999999;
+}
+.boardInfoName {
+  font-weight: 700;
+  font-size: 12px;
+  color: #555555;
+}
+.boardInfoView {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  fill: #aaaaaa;
+  margin: 0;
+}
+.boardInfoComment {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  fill: #aaaaaa;
+  margin: 0;
+}
+.postMoveArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.postMove {
+  border-radius: 10px;
+  border: 1px solid #d6c2ff;
+  padding: 5px;
+  color: #7742E3;
+  width: 75px;
+  font-weight: 500;
+  font-size: 12px;
 }
