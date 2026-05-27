@@ -2,11 +2,6 @@ import React from 'react';
 import { AI_INPUT_VERSIONS } from './constants';
 
 const HomeSection = ({ aiInput, setAiInput }) => {
-  const handleInputToggle = (e) => {
-    e.stopPropagation();
-    setAiInput(AI_INPUT_VERSIONS.V2);
-  };
-
   return (
       <main className='main_home'>
         <div className='homeSection' onClick={() => setAiInput('aiinputV1')}>
