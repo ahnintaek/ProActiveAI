@@ -4,7 +4,7 @@
 }
 body {
   margin: 0 auto;
-  font-family:sans-serif;
+  font-family: 'open sans', sans-serif;
   min-width: 1100px;
 }
 button {
@@ -616,6 +616,7 @@ main {
 .chattext {
   border: 1px solid #eeeeee;
   border-radius: 10px 10px 10px 1px;
+  background: #ffffff;
   padding: 10px 15px;
   font-size: 14px;
   margin: 5px 0 0 0;
@@ -804,6 +805,9 @@ main {
   text-align: center;
 }
 
+.main_board {
+  overflow: auto;
+}
 .boardArea {
   display: flex;
   flex-direction: column;
@@ -811,7 +815,8 @@ main {
   padding: 20px 30px;
   background: #F2F4F8;
   min-height: 100%;
-  overflow-y: auto;
+  container-name: boardArea;
+  container-type: inline-size;
 }
 .boardTitle {
   font-weight: bold;
@@ -866,8 +871,9 @@ main {
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0 0 1px #cccccc;
-  padding: 15px 0;
+  padding: 10px 0;
   background: #ffffff;
+  overflow-y: hidden;
 }
 
 .boardSectionCardTitle {
@@ -915,7 +921,7 @@ main {
   height: 20px;
   font-size: 12px;
   font-weight: 500;
-  padding: 5px 15px;
+  padding: 5px 10px;
   margin: 0 5px;
   border-radius: 10px;
   text-align: center;
@@ -996,4 +1002,196 @@ main {
   width: 75px;
   font-weight: 500;
   font-size: 12px;
+}
+.postMove:hover {
+  background: #7742E3;
+  color: #ffffff;
+}
+.boardPostMore {
+  margin: 15px auto 5px;
+}
+.boardPostMoreBtn {
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 18px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.boardSectionPannel{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.pannelArea {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 20px 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 1px #cccccc;
+}
+.pannelAssistantTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.assistantTitle {
+  font-weight: bold;
+  font-size: 15px;
+  color: #555555;
+  margin: 0;
+}
+.assistantSection {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.assistantName {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+}
+.assistantNum {
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 10px;
+}
+.assistantName.notreadMemo svg{
+  border-radius: 5px;
+  padding: 3px;
+  background: #F1F6FE;
+  fill: #4A64E2;
+}
+.assistantNum.notreadMemo {
+  color: #4A64E2;
+}
+.assistantName.deadlinMemo svg{
+  border-radius: 5px;
+  padding: 3px;
+  background: #FBF2F2;
+  fill: #D6635E;
+}
+.assistantNum.deadlinMemo {
+  color: #D6635E;
+}
+.assistantName.newMemo svg{
+  border-radius: 5px;
+  padding: 3px;
+  background: #F5F3FE;
+  fill: #7A46E4;
+}
+.assistantNum.newMemo {
+  color: #7A46E4;
+}
+.pannelMoreBtn {
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 1px solid #7A46E4;
+  color: #7A46E4;
+  font-weight: 500;
+}
+.pannelMoreBtn:hover {
+  background: #7A46E4;
+  color: #ffffff;
+}
+.assistantAIBtn {
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #ffffff;
+  background: linear-gradient(to right, #7445E4, #5F7EED);
+  font-weight: bold;
+}
+.pannelMemograph {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.memoGraphArea {
+  position: relative;
+}
+.graphText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #555555;
+  font-size: 13px;
+  width: 27px;
+  text-align: center;
+}
+.graphText span {
+  font-weight: bold;
+  font-size: 16px;
+}
+.memoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.memoColumnText {
+  font-size: 12px;
+}
+.memoColumnText svg {
+  margin-right: 3px;
+}
+.memoColumnText span {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.poppularPostArea {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.pannelPost {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+.pannelPostNum {
+  border-radius: 50px;
+  padding: 0 5px;
+  color: #ffffff;
+}
+.pannelPostNum.top {
+  background: #7445E4;
+}
+.pannelPostNum.middle {
+  background: #99A3B6;
+}
+.pannelPostNum.low {
+  background: #cccccc;
+}
+.pannelPostTitle {
+  flex: 1;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.pannelPostView {
+  color: #999999;
+}
+
+@container boardArea (max-width: 1050px) {
+  .boardSection {
+    display: flex;
+    flex-direction: column;
+  }
 }

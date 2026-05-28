@@ -11,7 +11,8 @@ export const mockPosts = [
     views: 12,
     comments: 2,
     isMy: false,
-    isImportant: false
+    isImportant: false,
+    moveBtn: '바로확인'
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ export const mockPosts = [
     views: 5,
     comments: 0,
     isMy: true,
-    isImportant: true
+    isImportant: true,
+    moveBtn: '확인하기'
   },
   {
     id: 3,
@@ -39,7 +41,8 @@ export const mockPosts = [
     views: 3,
     comments: 0,
     isMy: false,
-    isImportant: false
+    isImportant: false,
+    moveBtn: '바로확인'
   },
     { 
     id: 4,
@@ -53,7 +56,8 @@ export const mockPosts = [
     views: 6,
     comments: 1,
     isMy: false,
-    isImportant: true
+    isImportant: true,
+    moveBtn: '바로확인'
     },
     { 
     id: 5,
@@ -67,6 +71,52 @@ export const mockPosts = [
     views: 2,
     comments: 3,
     isMy: false,
-    isImportant: true
+    isImportant: true,
+    moveBtn: '확인하기'
+    },
+    { 
+    id: 6,
+    category: 'announcement',
+    labelText: '알림',
+    title: '팀워크 향상 프로그램 참가자 모집',
+    content: '더 나은 협업을 위한 팀워크 향상 프로그램 참가자를 모집합니다.',
+    author: '김대호',
+    team: '조직문화팀',
+    date: '2026.04.22 09:30',
+    views: 4,
+    comments: 0,
+    isMy: true,
+    isImportant: true,
+    moveBtn: '바로확인'
+    },
+    { 
+    id: 7,
+    category: 'notice',
+    labelText: '공지',
+    title: '정보보안 교육 필수 이수 안내',
+    content: '전 임직원 대상 정보보안 교육이 진행됩니다. 기한 내 필수 이수 부탁드립니다.',
+    author: '정민준',
+    team: '보안팀',
+    date: '2026.06.03 11:00',
+    views: 7,
+    comments: 1,
+    isMy: false,
+    isImportant: false,
+    moveBtn: '바로확인'
+    },
+    {
+    id: 8,
+    category: 'notice',
+    labelText: '공지',
+    title: '정보보안 교육 필수 이수 안내',
+    content: '전 임직원 대상 정보보안 교육이 진행됩니다. 기한 내 필수 이수 부탁드립니다.',
+    author: '정민준',
+    team: '보안팀',
+    date: '2026.06.03 11:00',
+    views: 7,
+    comments: 1,
+    isMy: false,
+    isImportant: false,
+    moveBtn: '바로확인'
     },
 ];

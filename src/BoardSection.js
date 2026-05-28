@@ -66,14 +66,88 @@ const BoardSection = ({ currentPage, setCurrentPage }) => {
                     </div>
                   </div>
                   <div className='postMoveArea'>
-                    <button type="button" className="postMove">바로확인</button>
+                    <button type="button" className="postMove">{post.moveBtn}</button>
                   </div>
                 </div>
               ))}
             </div>
+            <div className='boardPostMore'>
+              <button type='button' className='boardPostMoreBtn'>더보기 
+                <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 800" width="18px" fill="#aaaaaa"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+              </button>
+            </div>
           </div>
           <div className="boardSectionPannel">
-            1
+            <div className="pannelArea">
+              <div className="pannelAssistantTitle">
+                <p className='assistantTitle'>AI Assistant</p>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#aaaaaa"><path d="M508.5-291.5Q520-303 520-320t-11.5-28.5Q497-360 480-360t-28.5 11.5Q440-337 440-320t11.5 28.5Q463-280 480-280t28.5-11.5ZM440-440h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+              </div>
+              <div className="assistantSection">
+                <span className="assistantName notreadMemo">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="13px" viewBox="0 -960 960 960" width="13px" fill="#e3e3e3"><path d="M80-160v-160h160v160H80Zm240 0v-160h560v160H320ZM80-400v-160h160v160H80Zm240 0v-160h560v160H320ZM80-640v-160h160v160H80Zm240 0v-160h560v160H320Z"/></svg>
+                  미확인 회람</span>
+                <span className="assistantNum notreadMemo">4건</span>
+              </div>
+              <div className="assistantSection">
+                <span className="assistantName deadlinMemo">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="13px" viewBox="0 -960 960 960" width="13px" fill="#e3e3e3"><path d="M444-384v-336h72v336h-72Zm0 144v-72h72v72h-72ZM240-48H120q-33 0-52.5-19.5T48-120v-120h72v120h120v72Zm480 0v-72h120v-120h72v120q0 33-19.5 52.5T840-48H720ZM48-720v-120q0-33 19.5-52.5T120-912h120v72H120v120H48Zm792 0v-120H720v-72h120q33 0 52.5 19.5T912-840v120h-72Z"/></svg>
+                  마감 임박 회람</span>
+                <span className="assistantNum deadlinMemo">1건</span>
+              </div>
+              <div className="assistantSection">
+                <span className="assistantName newMemo">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="13px" viewBox="0 -960 960 960" width="13px" fill="#e3e3e3"><path d="M96-528q0-88 35.5-162T230-818l51 50q-52 43-82.5 105.5T168-528H96Zm696 0q0-73-30.5-135.5T678-769l52-51q62 53 98 128.5T864-528h-72ZM192-216v-72h48v-240q0-87 53.5-153T432-763v-53q0-20 14-34t34-14q20 0 34 14t14 34v53q85 16 138.5 82T720-528v240h48v72H192Zm288-276Zm0 396q-30 0-51-21t-21-51h144q0 30-21 51t-51 21ZM312-288h336v-240q0-70-49-119t-119-49q-70 0-119 49t-49 119v240Z"/></svg>
+                  신규 공지</span>
+                <span className="assistantNum newMemo">2건</span>
+                </div>
+              <button type="button" className='pannelMoreBtn'>모두 확인하기</button>
+              <button type="button" className='assistantAIBtn'>AI에게 물어보기→</button>
+            </div>
+            <div className="pannelArea">
+              <div className="pannelAssistantTitle">
+                <p className='assistantTitle'>이달의 회람 현황</p>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#aaaaaa"><path d="M508.5-291.5Q520-303 520-320t-11.5-28.5Q497-360 480-360t-28.5 11.5Q440-337 440-320t11.5 28.5Q463-280 480-280t28.5-11.5ZM440-440h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+              </div>
+              <div className="pannelMemograph">
+                <div className="memoGraphArea">
+                  <div className="memoGraph">
+                  </div>
+                  <p className="graphText">전체<span>26</span>건</p>
+                </div>
+                <div className="memoColumn">
+                  <span className="memoColumnText">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 850" width="10px" fill="#6CC26B"><path d="M480.28-96Q401-96 331-126t-122.5-82.5Q156-261 126-330.96t-30-149.5Q96-560 126-629.5q30-69.5 82.5-122T330.96-834q69.96-30 149.5-30t149.04 30q69.5 30 122 82.5T834-629.28q30 69.73 30 149Q864-401 834-331t-82.5 122.5Q699-156 629.28-126q-69.73 30-149 30Z"/></svg>
+                    완료<span>12 (50%)</span></span>
+                  <span className="memoColumnText">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 850" width="10px" fill="#5F82ED"><path d="M480.28-96Q401-96 331-126t-122.5-82.5Q156-261 126-330.96t-30-149.5Q96-560 126-629.5q30-69.5 82.5-122T330.96-834q69.96-30 149.5-30t149.04 30q69.5 30 122 82.5T834-629.28q30 69.73 30 149Q864-401 834-331t-82.5 122.5Q699-156 629.28-126q-69.73 30-149 30Z"/></svg>
+                    진행 중<span>8 (33%)</span></span>
+                  <span className="memoColumnText">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 850" width="10px" fill="#DE7A36"><path d="M480.28-96Q401-96 331-126t-122.5-82.5Q156-261 126-330.96t-30-149.5Q96-560 126-629.5q30-69.5 82.5-122T330.96-834q69.96-30 149.5-30t149.04 30q69.5 30 122 82.5T834-629.28q30 69.73 30 149Q864-401 834-331t-82.5 122.5Q699-156 629.28-126q-69.73 30-149 30Z"/></svg>
+                    미확인<span>4 (17%)</span></span>
+                  <span className="memoColumnText">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 850" width="10px" fill="#D2524B"><path d="M480.28-96Q401-96 331-126t-122.5-82.5Q156-261 126-330.96t-30-149.5Q96-560 126-629.5q30-69.5 82.5-122T330.96-834q69.96-30 149.5-30t149.04 30q69.5 30 122 82.5T834-629.28q30 69.73 30 149Q864-401 834-331t-82.5 122.5Q699-156 629.28-126q-69.73 30-149 30Z"/></svg>
+                    만료<span>2 (8%)</span></span>
+                </div>
+              </div>
+              <button type="button" className='pannelMoreBtn'>상세 보기</button>
+            </div>
+            <div className="pannelArea">
+              <div className="pannelAssistantTitle">
+                <p className='assistantTitle'>인기 게시글</p>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#aaaaaa"><path d="M508.5-291.5Q520-303 520-320t-11.5-28.5Q497-360 480-360t-28.5 11.5Q440-337 440-320t11.5 28.5Q463-280 480-280t28.5-11.5ZM440-440h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+              </div>
+              <div className="poppularPostArea">
+                <div className="pannelPost"><span className="pannelPostNum top">1</span><span className="pannelPostTitle">2026년 상반기 마케팅 전략 공유</span><span className="pannelPostView">1,234</span></div>
+                <div className="pannelPost"><span className="pannelPostNum top">2</span><span className="pannelPostTitle">근무시간 변경 안내 (유연근무제)</span><span className="pannelPostView">987</span></div>
+                <div className="pannelPost"><span className="pannelPostNum top">3</span><span className="pannelPostTitle">정보보안 교육 필수 이수 안내</span><span className="pannelPostView">856</span></div>
+                <div className="pannelPost"><span className="pannelPostNum middle">4</span><span className="pannelPostTitle">업무 효율을 높이는 AI 도구 가이드</span><span className="pannelPostView">723</span></div>
+                <div className="pannelPost"><span className="pannelPostNum middle">5</span><span className="pannelPostTitle">팀워크 향상 프로그램 참가자 모집</span><span className="pannelPostView">641</span></div>
+                <div className="pannelPost"><span className="pannelPostNum low">6</span><span className="pannelPostTitle">사무실 냉난방 기기 구매 요청 회람</span><span className="pannelPostView">589</span></div>
+                <div className="pannelPost"><span className="pannelPostNum low">7</span><span className="pannelPostTitle">사내 카페 신규 메뉴 투표 이벤트</span><span className="pannelPostView">521</span></div>
+              </div>
+              <button type="button" className='pannelMoreBtn'>더보기</button>
+            </div>            
           </div>
         </div>
       </div>
